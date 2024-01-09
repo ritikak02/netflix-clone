@@ -1,0 +1,356 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.header {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    padding: 10px 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    border-bottom: 10px solid #303030;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.nav-logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: #db0001;
+}
+
+.nav-btn-1 {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 20px;
+}
+
+.nav-btn-1 img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.head-items {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.head-items h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    margin: auto;
+    width: 100%;
+}
+
+.head-items h3 {
+    font-weight: 600;
+    margin-bottom: 25px;
+
+}
+
+.head-items p {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+
+}
+
+.login-form {
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.login-form input {
+    background: transparent;
+    width: 25rem;
+    padding: 18px 30px;
+    border: 1px solid #dedddd;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.login-form button {
+    background: #db0001;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 18px 30px;
+}
+
+.login-form button::after {
+    content: ' >';
+}
+
+.categories {
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.col-item {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.col-img {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.col-img img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.categories h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.qna {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.qna h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.qna-accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.qna-accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.qna-accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.qna-accordion li label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.2s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.qna-accordion .acc-ans {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.qna-accordion input[type="radio"]:checked+label+.acc-ans {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.qna-accordion input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.qna .login-form {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.qna .bottom-form {
+    font-size: 15px;
+}
+
+@media(max-width:780px) {
+    .header {
+        height: 55vh;
+        width: 100%;
+        border-bottom: 8px solid #303030;
+    }
+
+    .nav-logo {
+        width: 80px;
+        cursor: pointer;
+    }
+
+    nav button {
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+        margin-left: 6px;
+    }
+
+    .nav-btn-1 {
+        padding: 5px 8px;
+    }
+
+    .head-items {
+        width: 100%;
+        top: 30%;
+        margin-top: 100px;
+    }
+
+    .head-items h1 {
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: 600;
+        margin: 0 auto 10px;
+        width: 85%;
+    }
+
+    .head-items h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+
+    .head-items p {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 0 auto 10px;
+        width: 80%;
+    }
+
+    .login-form input {
+        width: 17rem;
+        padding: 12px 30px;
+        margin-left: 0px;
+        font-size: 14px;
+    }
+
+    .login-form button {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 12px 25px;
+    }
+
+    .row-item {
+        text-align: center;
+    }
+
+    .row-item:nth-child(2),
+    .row-item:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .col-item {
+        flex-basis: 100%;
+    }
+
+    .col-img {
+        flex-basis: 100%;
+    }
+
+    .col-img img {
+        width: 80%;
+    }
+
+    .categories h2 {
+        font-size: 30px;
+    }
+
+    .categories p {
+        font-size: 18px;
+    }
+
+    .qna h2 {
+        font-size: 25px;
+    }
+
+    .qna-accordion li label {
+        padding: 15px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #303030;
+        margin-bottom: 2px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .qna-accordion li label::after {
+        font-size: 25px;
+    }
+
+    .qna-accordion .acc-ans {
+        padding: 0 10px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+}
